@@ -1,0 +1,9 @@
+#!/usr/bin/with-contenv bash
+
+umask 0002
+
+chown -R bytesized:bytesized /app /tv /config /root
+
+PATH=/usr/bin:/usr/local/bin:$PATH
+
+exec s6-setuidgid bytesized /usr/bin/mono /app/NzbDrone/NzbDrone.exe

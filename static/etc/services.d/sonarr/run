@@ -1,11 +1,11 @@
 #!/usr/bin/with-contenv bash
 
-umask 0002
+umask 022
 
 chown -R bytesized:bytesized /app /tv /config /root
 
 PATH=/usr/bin:/usr/local/bin:$PATH
 
 echo "Starting Sonarr"
-exec s6-setuidgid bytesized /usr/bin/mono /app/NzbDrone/NzbDrone.exe
+exec s6-setuidgid bytesized /usr/bin/mono /app/NzbDrone/NzbDrone.exe -data=/config -nobrowser
 echo "Sonarr shut down"

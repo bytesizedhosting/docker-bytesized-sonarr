@@ -1,6 +1,6 @@
 #!/usr/bin/with-contenv bash
 
-chown -R bytesized:bytesized /app
+chown -R bytesized:bytesized /opt
 
 if [[ -e /config/nzbdrone.pid ]]; then
   echo "Removing pid"

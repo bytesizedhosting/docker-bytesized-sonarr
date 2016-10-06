@@ -14,6 +14,6 @@ RUN apt-get install -qy mono-complete\
 
 COPY /static /
 
-VOLUME /config /data /tv
+VOLUME /config /data /media
 
 EXPOSE 8989

@@ -6,4 +6,6 @@ chown -R bytesized:bytesized /app /tv /config /root
 
 PATH=/usr/bin:/usr/local/bin:$PATH
 
+echo "Starting Sonarr"
 exec s6-setuidgid bytesized /usr/bin/mono /app/NzbDrone/NzbDrone.exe
+echo "Sonarr shut down"
